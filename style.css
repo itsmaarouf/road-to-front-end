@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+    background-color: aliceblue;
+}
+.main .title{
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    color: darkcyan;
+}
+
+.main .levelTitle{
+    color: rgb(42, 165, 138);    
+}
+.main .levelButton{
+    display: flex;
+}
+
+
+.main .levelButton .btn{
+    margin: 15px;
+    background-color: pink;
+    color: black;
+    border-radius: 10px;
+    padding: 20px 40px;
+    font-size: 18px;
+    font-family: 'Lucida Sans Unicode';
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.main .levelButton .btn span{
+    position: relative;
+    z-index: 1;
+}
+
+.main .levelButton .btn::before{
+    content: "";
+    position: absolute;
+    background-color: orangered;
+    width: 0px;
+    height: 0px;
+    left: var(--xPos);
+    top: var(--xPos);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: width 0.5s, height 0.05s;
+}
+
+.main .levelButton .btn:hover::before{
+    width: 300px;
+    height: 300px;
+}
