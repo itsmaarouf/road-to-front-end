@@ -1,0 +1,69 @@
+/* General Style */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1457364887197-9150188c107b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80") no-repeat center center/ cover;
+}
+
+.container{
+    margin-top: 40px;
+    width: 550px;
+    height: 400px;
+}
+
+.header{
+    font-size: 1.2em;
+    color: aliceblue;
+    background-color: rgba(95, 158, 160, 0.3) ;
+    width: 80%;
+    padding: 5px;
+    margin: 20px auto;
+    box-shadow: 0 3px 15px;
+    border-radius: 8px;
+}
+
+.main-content{
+    width: 100%;
+    height: 300px;
+    background-color: rgba(64, 106, 131, 0.5);
+    border-radius: 18px;
+    padding: 50px 40px;
+    box-shadow: 0 5px 10px;
+}
+
+.main-content .text-area{
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.main-content .person{
+    font-size: 1.5em;
+    color: pink;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.button-area button{
+    background-color: rgb(51, 85, 104);
+    color: aliceblue;
+    font-size: 1.3rem;
+    padding: 5px 15px;
+    border-radius: 15px;
+    margin-top: 5px;
+    border: solid pink 1px;
+}
+
+.button-area button:active{
+    background-color: pink;
+    color:  rgb(51, 85, 104);
+}

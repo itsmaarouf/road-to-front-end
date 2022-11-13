@@ -26,9 +26,8 @@ body{
     margin: 15px;
     background-color: pink;
     color: black;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 20px 40px;
-    font-size: 18px;
     font-family: 'Lucida Sans Unicode';
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     text-decoration: none;
@@ -51,7 +50,7 @@ body{
     top: var(--xPos);
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    transition: width 0.5s, height 0.05s;
+    transition: width 0.5s, height 0.5s;
 }
 
 .main .levelButton .btn:hover::before{
