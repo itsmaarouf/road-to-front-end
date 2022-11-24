@@ -9,7 +9,16 @@ body {
     background-size: cover;
     overflow: hidden;
 }
-
+.digitalClock{
+    width: 60%;
+    height: 250px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(163, 45, 128, 0.2);
+    border-radius: 15px;
+}
 .title{
     text-transform: uppercase;
     letter-spacing: 23px;
@@ -53,4 +62,57 @@ body {
     width: 20px;
     height: 80px;
     font-size: 20px;
+}
+
+.container{
+    width: 60%;
+    height: 250px;
+    background-color: rgba(163, 45, 128, 0.2);
+    margin: 0px auto;
+    padding: 30px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    border-radius: 15px;
+}
+
+#timer{
+    width: 100%;
+    font-size: 72px;
+    text-align: center;
+    margin: auto;
+    padding: 25px 0;
+    color: aliceblue;
+}
+
+.buttons{
+    text-align: center;
+}
+
+button {
+    margin: 0 10px;
+    border-radius: 12px;
+}
+
+button i {
+    font-size: 1.5rem;
+    padding: 5px;
+    color: aliceblue;
+    width: 50px;
+}
+
+#startStopBtn{
+    background-color: green;
+}
+#resetBtn {
+    background-color: red;
+}
+
+.pagesBtn{
+    margin: 30px;
+}
+
+.pagesBtn a button{
+    padding: 10px;
+    font-size: 20px;
+    color: rgb(218, 45, 59);
+    font-weight: bold;
 }
