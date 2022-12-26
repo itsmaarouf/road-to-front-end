@@ -1,0 +1,18 @@
+* {
+    text-align: center;
+}
+
+#grid {
+    display: inline-block;
+    width: 630px;
+    height: 400px;
+}
+
+img {
+    margin: 5px;
+    height: 130px;
+}
+
+#msg {
+    padding: 10px;
+}
