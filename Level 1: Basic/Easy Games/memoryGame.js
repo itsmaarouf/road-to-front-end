@@ -100,7 +100,7 @@ function checkMatch() {
     cardChosen = [];
     cardChosenIds = [];
 
-    if(cardsWon == cardArray/2){
+    if(cardsWon.length == cardArray.length/2){
       resultDisplay.textContent = 'Congratulations you found them all.';
     }
     if(messageDisplay.textContent.includes('Sorry')){

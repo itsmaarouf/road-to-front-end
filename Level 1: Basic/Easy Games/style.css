@@ -18,3 +18,40 @@ button {
     padding: 0;
     cursor: pointer;
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 5px;
+}
+
+.square {
+    height: 150px;
+    background-color: lightgrey;
+}
+
+.mole {
+    background-color: blue;
+}
+
+.score,
+.time-left,
+.playAgain {
+    display: inline;
+    float: right;
+    background-color: burlywood;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.score h2,
+.time-left h2,
+.playAgain h2 {
+    display: inline;
+}
+
+.playAgain {
+    border: 1px;
+    cursor: pointer;
+}
