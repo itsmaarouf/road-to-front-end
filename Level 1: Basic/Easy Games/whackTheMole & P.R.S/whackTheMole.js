@@ -22,7 +22,7 @@ const score = document.querySelector('#score');
 
 let result = 0;
 let hitPositions;
-let currentTime = 10;
+let currentTime = 60;
 let timerId = null;
 
 function randomSquare() {
@@ -37,6 +37,7 @@ squares.forEach(square => {
     square.addEventListener('mousedown', ()=> {
         if(hitPositions==square.id){
             result++;
+            currentTime++;
             score.textContent = result;
             hitPositions = null;
         }
@@ -44,7 +45,7 @@ squares.forEach(square => {
 })
 
 function moveMole(){
-    timerId = setInterval(randomSquare,1000)
+    timerId = setInterval(randomSquare,500)
 }
 
 moveMole();

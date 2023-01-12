@@ -36,8 +36,7 @@ button {
 }
 
 .score,
-.time-left,
-.playAgain {
+.time-left {
     display: inline;
     float: right;
     background-color: burlywood;
@@ -46,12 +45,6 @@ button {
 }
 
 .score h2,
-.time-left h2,
-.playAgain h2 {
+.time-left h2 {
     display: inline;
-}
-
-.playAgain {
-    border: 1px;
-    cursor: pointer;
 }

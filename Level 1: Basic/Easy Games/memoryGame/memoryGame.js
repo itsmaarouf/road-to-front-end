@@ -2,51 +2,51 @@ const cardArray = [
     {
    
       name: 'fries',
-      img: 'img/fries.png'
+      img: '../img/fries.png'
     },
     {
       name: 'cheeseburger',
-      img: 'img/cheeseburger.png'
+      img: '../img/cheeseburger.png'
     },
     {
       name: 'ice-cream',
-      img: 'img/ice-cream.png'
+      img: '../img/ice-cream.png'
     },
     {
       name: 'pizza',
-      img: 'img/pizza.png'
+      img: '../img/pizza.png'
     },
     {
       name: 'milkshake',
-      img: 'img/milkshake.png'
+      img: '../img/milkshake.png'
     },
     {
       name: 'hotdog',
-      img: 'img/hotdog.png'
+      img: '../img/hotdog.png'
     },
     {
       name: 'fries',
-      img: 'img/fries.png'
+      img: '../img/fries.png'
     },
     {
       name: 'cheeseburger',
-      img: 'img/cheeseburger.png'
+      img: '../img/cheeseburger.png'
     },
     {
       name: 'ice-cream',
-      img: 'img/ice-cream.png'
+      img: '../img/ice-cream.png'
     },
     {
       name: 'pizza',
-      img: 'img/pizza.png'
+      img: '../img/pizza.png'
     },
     {
       name: 'milkshake',
-      img: 'img/milkshake.png'
+      img: '../img/milkshake.png'
     },
     {
       name: 'hotdog',
-      img: 'img/hotdog.png'
+      img: '../img/hotdog.png'
     }
   ];
 
@@ -62,7 +62,7 @@ const cardsWon = [];
 function createBoard() {
   for (let i = 0; i < cardArray.length; i++) {
     const card = document.createElement('img');
-    card.setAttribute('src','img/blank.png');
+    card.setAttribute('src','../img/blank.png');
     card.setAttribute('data-id', i)
     card.addEventListener('click',flipCard);
     gridDisplay.appendChild(card);
@@ -84,8 +84,8 @@ function checkMatch() {
 
   if(cardChosen[0] == cardChosen[1] && cardChosenIds[0] != cardChosenIds[1]){
     messageDisplay.textContent ='Good, you have a match';
-    cards[optionOneId].setAttribute('src','img/white.png');
-    cards[optionTwoId].setAttribute('src','img/white.png');
+    cards[optionOneId].setAttribute('src','../img/white.png');
+    cards[optionTwoId].setAttribute('src','../img/white.png');
     cards[optionOneId].removeEventListener('click', flipCard);
     cards[optionTwoId].removeEventListener('click', flipCard);
     cardsWon.push(cardChosen)
@@ -93,8 +93,8 @@ function checkMatch() {
     
   }else{
     console.log('you have no match');
-    cards[optionOneId].setAttribute('src','img/blank.png');
-    cards[optionTwoId].setAttribute('src','img/blank.png');
+    cards[optionOneId].setAttribute('src','../img/blank.png');
+    cards[optionTwoId].setAttribute('src','../img/blank.png');
     messageDisplay.textContent ='Sorry, play again';
   }
     cardChosen = [];
