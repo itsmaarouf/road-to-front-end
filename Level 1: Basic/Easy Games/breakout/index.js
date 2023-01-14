@@ -1,13 +1,22 @@
 const grid = document.querySelector('.grid');
+const score = document.querySelector('#score');
+const start = document.querySelector('#start');
+const pause = document.querySelector('#pause');
+let userScore = 0;
 const blockWidth = 100;
 const blockHeight = 20;
 const boardWidth = 560;
+const boardHeight = 300;
+const ballWidth = 20;
 const userStart = [230, 10];
 let currentPosition = userStart;
 let timeId;
+let xDirections = 2;
+let yDirections = 2;
 
 const ballStart = [270, 40];
 let currentBallPosition = ballStart;
+let ballSpeed = 40;
 
 // class Block
 class Block {
@@ -98,11 +107,94 @@ function MoveUser(e) {
     }
 }
 
-document.addEventListener('keydown', MoveUser);
+
+//
+function startGame() {
+    timeId = setInterval(moveBall, ballSpeed);
+    document.addEventListener('keydown', MoveUser);
+}
+
+function pauseGame() {
+    clearInterval(timeId)
+    document.removeEventListener("keydown", MoveUser)
+}
 
 // create a ball
 const ball = document.createElement('div');
 ball.classList.add('ball');
 drawBall()
 grid.appendChild(ball);
+
+function moveBall() {
+    currentBallPosition[0] += xDirections;
+    currentBallPosition[1] += yDirections;
+    drawBall();
+    checkCollisions()
+}
+
+
+// check for collisions
+
+function checkCollisions() {
+    // check for block collisions
+    for (let i = 0; i < Blocks.length; i++) {
+        if (
+            // checking if ball position between Block xAxis
+            (currentBallPosition[0] > Blocks[i].bottomLeft[0] &&
+                currentBallPosition[0] < Blocks[i].bottomRight[0]) &&
+            // checking if ball position between Block yAxis
+            ((currentBallPosition[1] + ballWidth) > Blocks[i].bottomLeft[1] &&
+                currentBallPosition[1] < Blocks[i].topLeft[1])
+        ) {
+            const allBlocks = Array.from(document.querySelectorAll('.block'));
+            // remove class from Block
+            allBlocks[i].classList.remove('block');
+            // delete Block from Blocks array
+            Blocks.splice(i, 1);
+            // change Direction of ball
+            yDirections *= -1;
+            // add score to player
+            userScore++;
+            score.textContent = 'user score is: ' + userScore;
+
+            // check if player wins
+            if (Blocks.length === 0) {
+                score.textContent = "You win!";
+                clearInterval(timeId)
+                document.removeEventListener("keydown", MoveUser)
+            }
+        }
+
+    }
+
+    // check for user collisions
+    if (
+        (currentBallPosition[0] > currentPosition[0] &&
+            currentBallPosition[0] < currentPosition[0] + blockWidth) &&
+        (currentBallPosition[1] > currentPosition[1] &&
+            currentBallPosition[1] < currentPosition[1] + blockHeight)
+    ) {
+        // change Direction of ball
+        yDirections *= -1;
+    }
+
+    // check for wall collisions
+    if (currentBallPosition[0] === boardWidth - ballWidth) {
+        xDirections = -2
+    } else if (currentBallPosition[0] === 0) {
+        xDirections = 2
+    } else if (currentBallPosition[1] === 0) {
+        yDirections = 2;
+    } else if (currentBallPosition[1] === boardHeight - ballWidth) {
+        yDirections = -2;
+    }
+
+    // check Game Score
+    if (currentBallPosition[1] === 0) {
+        clearInterval(timeId);
+        grid.textContent = "Game Score";
+        document.removeEventListener("keydown", MoveUser)
+    }
+}
+
 
