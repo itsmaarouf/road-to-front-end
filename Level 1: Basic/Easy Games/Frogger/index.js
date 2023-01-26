@@ -2,11 +2,20 @@ const timeLeftDisplay = document.querySelector('#time-left');
 const resultDisplay = document.querySelector('#result');
 const startPauseBtn = document.querySelector('#start-pause');
 const gridWidth = 9;
+let score = 0;
 const grid = document.querySelector('.grid');
-
+let currentIndex = 76;
+let timerId;
+// game time
+let gameTime = 10;
+let currentTime = gameTime;
+// to control the winning and losing
+let controlTimerId;
+// with Barriers function we are sure that the player will go up & down only
 function Barriers(x) {
     return x % (Math.round(gridWidth / 2)) + 1
 }
+// Here we create cars to move them later
 function CreateCars(x) {
     return x % (Math.round(gridWidth / 3)) + 1
 }
@@ -43,7 +52,6 @@ for (let i = 0; i < gridWidth; i++) {
 
     }
 }
-let currentIndex = 76;
 // collect all the div elements under the grid element in squares variable
 const squares = document.querySelectorAll('.grid div');
 const logsLeft = document.querySelectorAll('.log-left');
@@ -80,14 +88,19 @@ function moveFrog(e) {
 }
 //add the class frog from the grid element
 squares[currentIndex].classList.add('frog');
-// listen to the keyup event to move the frog 
-document.addEventListener('keyup', moveFrog)
 
 function autoMoveElement() {
+    currentTime--;
+    timeLeftDisplay.textContent = currentTime;
     logsLeft.forEach(logsLeft => moveLogLeft(logsLeft));
     logsRight.forEach(logsRight => moveLogRight(logsRight));
     carsLeft.forEach(carsLeft => moveCarLeft(carsLeft));
     carsRight.forEach(carsRight => moveCarRight(carsRight));
+}
+
+function control() {
+    lose();
+    win();
 }
 // move logs to the left side
 function moveLogLeft(logsLeft) {
@@ -151,4 +164,46 @@ function moveCarRight(carsRight) {
         }
     }
 }
-setInterval(autoMoveElement, 2000)
+// check if player loses
+function lose() {
+    if (
+        squares[currentIndex].classList.contains('l4') ||
+        squares[currentIndex].classList.contains('l5') ||
+        squares[currentIndex].classList.contains('c1') ||
+        currentTime === 0
+    ) {
+        resultDisplay.textContent = "Game over";
+        clearInterval(timerId);
+        clearInterval(controlTimerId);
+        timerId, controlTimerId = null;
+        squares[currentIndex].classList.remove('frog');
+        document.removeEventListener('keyup', moveFrog);
+    }
+}
+
+function win() {
+    if (squares[currentIndex].classList.contains('ending-block')) {
+        resultDisplay.textContent = ++score;
+        squares[currentIndex].classList.remove('frog')
+        currentTime = --gameTime;
+        currentIndex = 76;
+        squares[currentIndex].classList.add('frog')
+    }
+}
+startPauseBtn.addEventListener('click', () => {
+    if (timerId) {
+        clearInterval(timerId);
+        clearInterval(controlTimerId);
+        timerId, controlTimerId = null;
+        document.removeEventListener('keyup', moveFrog);
+    } else {
+        if (currentTime === 0) currentTime = --gameTime;
+        // move cars & logs every second
+        timerId = setInterval(autoMoveElement, 1000);
+        // control winning and losing
+        controlTimerId = setInterval(control, 40)
+        // listen to the keyup event to move the frog 
+        document.addEventListener('keyup', moveFrog);
+    }
+})
+

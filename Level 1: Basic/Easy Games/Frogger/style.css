@@ -31,24 +31,24 @@
 }*/
 
 
-
-
-
-.l4,
-.l5,
 .c2,
 .c3 {
-    background-color: lightblue;
-}
-
-.frog {
-    background-color: green;
+    background-color: lightgray;
 }
 
 .l1,
 .l2,
 .l3 {
     background-color: brown;
+}
+
+.frog {
+    background-color: green;
+}
+
+.l4,
+.l5 {
+    background-color: lightblue;
 }
 
 .c1 {
