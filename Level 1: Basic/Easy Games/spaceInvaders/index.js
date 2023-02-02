@@ -1,9 +1,11 @@
 const grid = document.querySelector('.grid');
+const resultDisplay = document.querySelector('.result');
 let width = 15;
 const totalSquares = 224
 let currentShooterIndex = totalSquares - width - 8;
 let direction = 1;
 let invadersId;
+let goingRight = true;
 
 for (let i = 0; i < 225; i++) {
     const square = document.createElement('div');
@@ -54,18 +56,55 @@ document.addEventListener('keydown', moveShooter)
 
 function moveInvaders() {
     const leftEdge = alienInvaders[0] % width == 0;
-    const rightEdge = alienInvaders[alienInvaders.length] % width < width - 1;
-    /*if (leftEdge) {
-        direction = direction * (-1)
-    } else if (rightEdge) {
-        direction = direction * (-1)
-    }*/
+    const rightEdge = alienInvaders[alienInvaders.length - 1] % width === width - 1;
     removeDraw();
+    if (rightEdge && goingRight) {
+        for (let i = 0; i < alienInvaders.length; i++) {
+            alienInvaders[i] += width + 1;
+            direction = -1;
+            goingRight = false;
+        }
+    } else if (leftEdge && !goingRight) {
+        for (let i = 0; i < alienInvaders.length; i++) {
+            alienInvaders[i] += width - 1;
+            direction = 1;
+            goingRight = true;
+        }
+    }
     for (let i = 0; i < alienInvaders.length; i++) {
         alienInvaders[i] += direction;
-
     }
-    draw()
-}
 
+    /*for (let i = 0; i < alienInvaders.length; i++) {
+        if (rightEdge && goingRight) {
+            alienInvaders[i] += width + 1;
+            direction = -1;
+            goingRight = false;
+        } else if (leftEdge && !goingRight) {
+            alienInvaders[i] += width - 1;
+            direction = 1;
+            goingRight = true;
+        }
+        alienInvaders[i] += direction;
+    }*/
+
+    draw()
+
+    function GameOver() {
+        resultDisplay.innerHTML = 'GAME OVER!';
+        clearInterval(invadersId);
+        document.removeEventListener('keydown', moveShooter);
+    }
+
+    if (squares[currentShooterIndex].classList.contains('invader', 'shooter')) {
+        GameOver()
+    }
+
+    for (let i = 0; i < alienInvaders.length; i++) {
+        if (alienInvaders[i] > squares.length - (width * 2)) {
+            GameOver()
+        }
+    }
+
+}
 invadersId = setInterval(moveInvaders, 500)
