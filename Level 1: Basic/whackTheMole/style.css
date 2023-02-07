@@ -4,21 +4,6 @@
     text-align: center;
 }
 
-h1,
-.row {
-    margin-top: 20px;
-}
-
-a.ChangeTheGame {
-    font-size: 1.5rem;
-}
-
-img,
-button {
-    padding: 0;
-    cursor: pointer;
-}
-
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
