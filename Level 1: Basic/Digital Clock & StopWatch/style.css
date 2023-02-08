@@ -9,17 +9,26 @@ body {
     background-size: cover;
     overflow: hidden;
 }
-.digitalClock{
-    width: 60%;
+
+.digitalClock {
+    width: 100%;
     height: 250px;
     padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(163, 45, 128, 0.2);
-    border-radius: 15px;
+    background-color: rgba(241, 232, 213, 0.99);
+    /*border-radius: 15px;*/
 }
-.title{
+
+
+.digitalClock>.title,
+.digitalClock>.clock span {
+    color: rgba(34, 34, 34, 0.877);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.title {
     text-transform: uppercase;
     letter-spacing: 23px;
     font-size: 20x;
@@ -29,16 +38,16 @@ body {
     color: beige;
 }
 
-.clock{
+.clock {
     display: flex;
 }
 
-.clock div{
+.clock div {
     margin: 5px;
     position: relative;
 }
 
-.clock span{
+.clock span {
     width: 100px;
     height: 80px;
     color: azure;
@@ -46,7 +55,6 @@ body {
     justify-content: center;
     align-content: center;
     font-size: 80px;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
 
 .clock .text {
@@ -56,7 +64,7 @@ body {
     letter-spacing: 5px;
 }
 
-.clock #ampm{
+.clock #ampm {
     bottom: 0;
     position: absolute;
     width: 20px;
@@ -64,17 +72,16 @@ body {
     font-size: 20px;
 }
 
-.container{
-    width: 60%;
-    height: 250px;
-    background-color: rgba(163, 45, 128, 0.2);
+.container {
+    width: 100%;
+    height: 400px;
+    background-color: rgba(29, 27, 28, 0.92);
     margin: 0px auto;
     padding: 30px;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-    border-radius: 15px;
+    text-shadow: 20px 20px 5px rgba(255, 255, 255, 0.3);
 }
 
-#timer{
+#timer {
     width: 100%;
     font-size: 72px;
     text-align: center;
@@ -83,7 +90,7 @@ body {
     color: aliceblue;
 }
 
-.buttons{
+.buttons {
     text-align: center;
 }
 
@@ -99,18 +106,19 @@ button i {
     width: 50px;
 }
 
-#startStopBtn{
+#startStopBtn {
     background-color: green;
 }
+
 #resetBtn {
     background-color: red;
 }
 
-.pagesBtn{
+.pagesBtn {
     margin: 30px;
 }
 
-.pagesBtn a button{
+.pagesBtn a button {
     padding: 10px;
     font-size: 20px;
     color: rgb(218, 45, 59);

@@ -9,36 +9,38 @@ const startStopBtn = document.querySelector('#startStopBtn')
 const resetBtn = document.querySelector('#resetBtn')
 
 // time values variables
-let seconds = 0, minutes = 0,hours = 0;
+let seconds = 0, minutes = 0, hours = 0;
 let theSeconds = 0; theMinutes = 0; theHours = 0;
 
 // lading zero 
 let timerInterval = null;
 let timerStatus = "stopped";
 
-function updateClock(){
+// function updateClock To get the current time and reformat it
+function updateClock() {
     let h = new Date().getHours()
     let m = new Date().getMinutes()
     let s = new Date().getSeconds()
     let ampm = "AM"
 
-    if (h>12) {
-        h-=12;
-        ampm= "PM"
+    if (h > 12) {
+        h -= 12;
+        ampm = "PM"
     }
 
     h = h < 10 ? "0" + h : h;
     m = m < 10 ? "0" + m : m;
     s = s < 10 ? "0" + s : s;
 
-    hourEl.innerText= h;
-    minutesEl.innerText= m;
-    secondsEl.innerText= s;
-    ampmEl.innerText=ampm;
-    setTimeout(()=>{
+    hourEl.innerText = h;
+    minutesEl.innerText = m;
+    secondsEl.innerText = s;
+    ampmEl.innerText = ampm;
+    setTimeout(() => {
         updateClock()
     }, 1000)
 }
+// Digital clock will be updated after all documents loaded
 window.addEventListener('load', function () {
     if (document.title == "Digital Clock") {
         updateClock();
@@ -56,17 +58,17 @@ function StopWatch() {
             hours++
         }
     }
-    if (seconds < 10 ) {
+    if (seconds < 10) {
         theSeconds = "0" + seconds.toString();
     } else {
         theSeconds = seconds;
     }
-    if (minutes < 10 ) {
+    if (minutes < 10) {
         theMinutes = "0" + minutes.toString();
     } else {
         theMinutes = minutes;
     }
-    if (hours < 10 ) {
+    if (hours < 10) {
         theHours = "0" + hours.toString();
     } else {
         theHours = hours;
@@ -95,6 +97,6 @@ resetBtn.addEventListener('click', function () {
     document.getElementById('timer').innerHTML = "00:00:00";
     document.getElementById('startStopBtn').innerHTML = `<i class="fa-solid fa-play"></i>`;
     timerStatus = "stopped";
-    
+
 })
 

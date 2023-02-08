@@ -2,9 +2,6 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Global Fonts links-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,11 +11,32 @@
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- StyleSheet -->
+    <title>Digital Clock</title>
     <link rel="stylesheet" href="style.css">
-    <title>Stop Watch</title>
 </head>
 
 <body>
+    <div class="digitalClock">
+        <h2 class="title">Digital Clock</h2>
+        <div class="clock">
+            <div>
+                <span id="hour">00</span>
+                <span class="text">Hours</span>
+            </div>
+            <div>
+                <span id="minutes">00</span>
+                <span class="text">Minutes</span>
+            </div>
+            <div>
+                <span id="seconds">00</span>
+                <span class="text">Seconds</span>
+            </div>
+            <div>
+                <span id="ampm">AM</span>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <h2 class="title">StopWatch</h2>
         <div id="timer">
@@ -32,9 +50,6 @@
                 <i class="fa-solid fa-arrow-rotate-left"></i>
             </button>
         </div>
-    </div>
-    <div class="pagesBtn">
-        <a href="index.html"><button>Show me Time!</button></a>
     </div>
     <script src="index.js"></script>
 </body>
