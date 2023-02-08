@@ -12,3 +12,4 @@
 
 >preview
 
+![StopWatch](https://github.com/itsmaarouf/road-to-front-end/blob/master/Level%201:%20Basic/Digital%20Clock%20%26%20StopWatch/preview/ClockStopWatch.gif)
