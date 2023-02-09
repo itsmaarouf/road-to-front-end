@@ -4,7 +4,7 @@
     font-family: 'Cairo', sans-serif;
 }
 
-body{
+body {
     background: url("https://images.unsplash.com/photo-1457364887197-9150188c107b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80") no-repeat center center/ cover;
     height: 100vh;
     display: flex;
@@ -12,22 +12,23 @@ body{
     align-items: center;
 }
 
-.FAQs-container{
+.FAQs-container {
     width: 50%;
     border: solid 1px rgba(136, 41, 41, 0.3);
     background: rgba(91, 48, 97, 0.185);
     padding: 20px;
     border-radius: 30px;
+    color: whitesmoke;
 }
 
-.FAQs-container .container-title{
+.FAQs-container .container-title {
     margin: 20px;
     text-align: center;
 }
 
-.FAQs-container .content-container .question{
+.FAQs-container .content-container .question {
     padding: 20px 0px;
-    font-size: 20px;
+    font-size: 28px;
     border-bottom: 1px solid #000;
     cursor: pointer;
     position: relative;
@@ -49,7 +50,7 @@ body{
     transition: .5s;
 }
 
-.FAQs-container .content-container.active .answer{
+.FAQs-container .content-container.active .answer {
     height: 150px;
 }
 
