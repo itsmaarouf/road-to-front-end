@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -30,10 +30,10 @@ body {
 
 #open-btn:hover {
     background: white;
-    color: black; 
+    color: black;
 }
 
-#modal{
+#modal {
     background-color: #fff;
     position: absolute;
     top: 50%;
@@ -50,7 +50,7 @@ body {
     animation: animateModal .4s;
 }
 
-#close-btn{
+#close-btn {
     position: absolute;
     font-size: 3rem;
     cursor: pointer;
@@ -59,7 +59,7 @@ body {
     left: 90%;
 }
 
-#modal-container{
+#modal-container {
     display: none;
     position: fixed;
     top: 0;
@@ -67,7 +67,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: 1;
-    background: rgba(0, 0, 0, .2);
+    background: rgba(0, 0, 0, .5);
 }
 
 /* Modal Animation Section */
@@ -78,7 +78,7 @@ body {
         opacity: 0;
     }
 
-    to{
+    to {
         top: 50%;
         opacity: 1;
     }
