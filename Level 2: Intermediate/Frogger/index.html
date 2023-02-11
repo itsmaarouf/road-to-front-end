@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FontAwesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--StyleSheet-->
+    <link rel="stylesheet" href="style.css">
+    <title>Frogger</title>
+</head>
+
+<body>
+    <h3 id="SecondsLeft">Seconds left: <span id="time-left"> 60</span><span id="result"></span></h3>
+
+    <div>
+        <span id="howToPlay"><q>To play the game,
+                use the arrow keys on your keyboard to control the frog's movements</q></span>
+    </div>
+    <div class="grid gameOver">
+    </div>
+    <div class="btn">
+        <button id="start-pause">
+            Start / Pause
+        </button>
+        <button onclick="location.reload()" id="rester">
+            Rester
+        </button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

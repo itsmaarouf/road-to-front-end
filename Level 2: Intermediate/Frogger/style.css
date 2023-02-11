@@ -1,0 +1,101 @@
+body {
+    display: grid;
+}
+
+.grid {
+    border: 1px solid #000;
+    height: 360px;
+    width: 360px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    float: left;
+}
+
+.gameOver {
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    color: ivory;
+    background-color: cadetblue;
+    font-weight: bold;
+}
+
+.grid div {
+    height: 40px;
+    width: 40px;
+}
+
+.fa-solid {
+    font-size: 32px;
+}
+
+.ending-block {
+    color: red;
+}
+
+.grass {
+    background-color: yellowgreen;
+}
+
+.starting-block {
+    background-color: blue;
+}
+
+.c1,
+.c2,
+.c3 {
+    background-color: ghostwhite;
+    color: orangered;
+
+}
+
+.l1,
+.l2,
+.l3,
+.l4,
+.l5 {
+    color: honeydew;
+    background-color: chocolate;
+}
+
+.frog {
+    color: green;
+}
+
+.theStart {
+    background-color: darkkhaki;
+}
+
+#SecondsLeft {
+    display: flex;
+    justify-content: center;
+    margin-bottom: auto;
+    color: darkcyan;
+}
+
+#howToPlay {
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    font-style: italic;
+    font-size: small;
+    text-align: center;
+    color: darkslategray;
+    margin: auto;
+    padding: 10px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+#start-pause,
+#rester {
+    width: 25%;
+    margin: 10px;
+    padding: 15px;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
