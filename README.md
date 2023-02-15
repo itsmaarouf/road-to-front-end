@@ -6,12 +6,11 @@ Welcome to the 3 Levels of Portfolio Projects repository! This repository is a c
 
 ### Level 1: Basic
 
-- [Digital Clock & Stopwatch](https://github.com/itsmaarouf/road-to-front-end/tree/master/Level%201:%20Basic/Digital%20Clock)
+- [Digital Clock & Stopwatch](https://github.com/itsmaarouf/road-to-front-end/tree/master/Level%201:%20Basic/Digital%20Clock%20%26%20StopWatch)
 - [Custom Overlay](https://github.com/itsmaarouf/road-to-front-end/tree/master/Level%201:%20Basic/Custom%20Overlay)
 - [FAQs page](https://github.com/itsmaarouf/road-to-front-end/tree/master/Level%201:%20Basic/FAQs)
 - [Quote Generator page](https://github.com/itsmaarouf/road-to-front-end/tree/master/Level%201:%20Basic/Quote%20Generator)
-- [Multiplication Exercises](https://github.com/itsmaarouf/road-to-front-end/tree/master/Level%201:%20Basic/Education%20Exercises)
-- [Static website](X)
+- [Multiplication Exercises](https://github.com/itsmaarouf/road-to-front-end/tree/master/Level%201:%20Basic/Multiplication%20Exercises)
 - [Rock, Paper, Scissors Game](https://github.com/itsmaarouf/road-to-front-end/tree/master/Level%201:%20Basic/Rock%2C%20Paper%2C%20Scissors%20Game)
 - [memory Game](https://github.com/itsmaarouf/road-to-front-end/tree/master/Level%201:%20Basic/memoryGame)
 - [whack the mole](https://github.com/itsmaarouf/road-to-front-end/tree/master/Level%201:%20Basic/whackTheMole)
