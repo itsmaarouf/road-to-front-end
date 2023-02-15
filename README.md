@@ -24,9 +24,7 @@ Welcome to the 3 Levels of Portfolio Projects repository! This repository is a c
 - [Breakout Game](https://github.com/itsmaarouf/road-to-front-end/tree/master/Level%202:%20Intermediate/breakout)
 - [Frogger](https://github.com/itsmaarouf/road-to-front-end/tree/master/Level%202:%20Intermediate/Frogger)
 - [Menu with animation](https://github.com/itsmaarouf/road-to-front-end/tree/master/Level%202:%20Intermediate/Cool%20Menu)
-- Flash Card App
 - [hover Effect](https://github.com/itsmaarouf/road-to-front-end/tree/master/Level%202:%20Intermediate/hover%20Effects)
-- Address Book (Contact Manager)
 - ...
 
 ### Level 3: Capstone
