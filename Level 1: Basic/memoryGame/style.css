@@ -1,11 +1,26 @@
 * {
     text-align: center;
+
+}
+
+h3 {
+    color: cadetblue;
 }
 
 #grid {
     display: inline-block;
     width: 630px;
     height: 400px;
+    margin: auto;
+}
+
+.success {
+    align-content: center;
+    font-size: 100px;
+    padding: 10px;
+    background-color: cadetblue;
+    color: beige;
+    border-radius: 20px;
 }
 
 img {
