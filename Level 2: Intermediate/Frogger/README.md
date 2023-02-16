@@ -7,3 +7,10 @@ To play the game, use the arrow keys on your keyboard to control the frog's move
 Every time the frog reaches its home, it earns 1 point and 5 additional seconds. The game ends if the frog is hit by a car, falls into the water, or if time runs out.
 
 > Good luck, and have fun playing **Frogger!**"
+
+
+![game start](img/game-start.png)
+
+![win](https://github.com/itsmaarouf/road-to-front-end/blob/master/Level%202:%20Intermediate/Frogger/img/frog-game.gif)
+
+![game over](img/game-Over.png)
