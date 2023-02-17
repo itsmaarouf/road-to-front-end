@@ -8,9 +8,8 @@ Every time the frog reaches its home, it earns 1 point and 5 additional seconds.
 
 > Good luck, and have fun playing **Frogger!**"
 
-
 ![game start](img/game-start.png)
 
-![win](https://github.com/itsmaarouf/road-to-front-end/blob/master/Level%202:%20Intermediate/Frogger/img/frog-game.gif)
+![win](img/frog-game.gif)
 
 ![game over](img/game-Over.png)
