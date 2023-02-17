@@ -4,4 +4,4 @@
 
 ![game start](img/game-start.png)
 
-![win](https://github.com/itsmaarouf/road-to-front-end/blob/master/Level%201:%20Basic/memoryGame/img/memoryGame.gif)
+![win](img/memoryGame.gif)
