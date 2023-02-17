@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     display: flex;
     justify-content: center;
@@ -9,7 +9,7 @@ body{
     font-family: monospace;
 }
 
-.form{
+.form {
     margin: 10px;
     background-color: aliceblue;
     padding: 20px;
@@ -17,7 +17,7 @@ body{
     border-radius: 15px;
 }
 
-.Answer{
+.Answer {
     display: block;
     width: 100%;
     box-sizing: border-box;
@@ -27,11 +27,11 @@ body{
     border-radius: 25px;
 }
 
-.Answer::placeholder{
+.Answer::placeholder {
     color: darkgray;
 }
 
-.btn{
+.btn {
     margin: 15px 0px 0px;
     background-color: rgb(67, 168, 58);
     color: aliceblue;
@@ -45,12 +45,36 @@ body{
     cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
     filter: brightness(0.9);
 }
 
-.score{
+.score {
     color: green;
     text-align: right;
     margin: 0;
+}
+
+.timeLeft {
+    color: green;
+    text-align: left;
+    margin: 0;
+    float: left;
+}
+
+.disabled {
+    background-color: rgb(164 165 164);
+    color: aliceblue;
+    box-shadow: none;
+    cursor: default;
+}
+
+.disabled:hover {
+    filter: brightness(1);
+}
+
+.result {
+    margin: auto;
+    padding: 20px;
+    font-size: xx-large;
 }
