@@ -45,6 +45,7 @@ const Blocks = [
     new Block(230, 210),
     new Block(340, 210),
     new Block(450, 210),
+
 ]
 
 // Create a block
@@ -159,7 +160,8 @@ function checkCollisions() {
 
             // check if player wins
             if (Blocks.length === 0) {
-                score.textContent = "You win!";
+                grid.textContent = "You win! ";
+                grid.style.backgroundColor = "burlywood";
                 clearInterval(timeId)
                 document.removeEventListener("keydown", MoveUser)
             }
@@ -192,7 +194,8 @@ function checkCollisions() {
     // check Game Score
     if (currentBallPosition[1] === 0) {
         clearInterval(timeId);
-        grid.textContent = "Game Score";
+        grid.textContent = "Game Over";
+        grid.style.backgroundColor = "burlywood";
         document.removeEventListener("keydown", MoveUser)
     }
 }
