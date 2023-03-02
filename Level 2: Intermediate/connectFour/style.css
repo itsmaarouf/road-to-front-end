@@ -1,15 +1,23 @@
+*{
+    font-family: monospace;
+}
 .grid {
     border: 1px solid;
-    width: 280px;
-    height: 240px;
+    width: 294px;
+    height: 252px;
     display: flex;
     flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    
+    background-color: beige;
+    font-size: 1rem;
 }
 
 .grid div {
+    border: 1px solid gainsboro;
     height: 40px;
     width: 40px;
-    /*background-color: blue;*/
 }
 
 .player-one {
@@ -20,4 +28,9 @@
 .player-two {
     background-color: blue;
     border-radius: 20px;
+}
+
+#current-player{
+    margin-left: 2.5rem;
+    text-shadow: 1px 0 1px #f7cb7a;
 }
