@@ -1,6 +1,6 @@
 # About
 
-Welcome to the 3 Levels of Portfolio Projects repository! This repository is a compilation of different types of portfolio projects at three different levels of difficulty: basic, intermediate, and capstone. Each project is designed to help you improve your coding skills, experiment with new technologies, and showcase your abilities to potential employers or collaborators.
+Welcome to the 3 Levels of Portfolio Projects repository! This repository is a compilation of different types of portfolio projects at three different levels of difficulty: Basic, Intermediate, and Advance. Each project should help improve programming skills and experiment with new ideas and technologies.
 
 ## Here is a brief overview of the projects included in each level
 
@@ -27,5 +27,7 @@ Welcome to the 3 Levels of Portfolio Projects repository! This repository is a c
 - ...
 
 ### Level 3: Capstone
+
+loading...
 
 - ...

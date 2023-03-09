@@ -15,6 +15,7 @@ body {
 
 .main .levelTitle {
   color: rgb(42, 165, 138);
+  white-space: break-spaces;
 }
 .Contains-btn {
   margin: auto;
