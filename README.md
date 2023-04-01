@@ -27,6 +27,7 @@ The games section contains projects that showcase the fun and entertaining side 
 - [Rock, Paper, Scissors Game](https://github.com/itsmaarouf/road-to-front-end/tree/master/Games/Rock%2C%20Paper%2C%20Scissors%20Game)
 - [Space Invaders Game](https://github.com/itsmaarouf/road-to-front-end/tree/master/Games/spaceInvaders)
 - [whack the mole Game](https://github.com/itsmaarouf/road-to-front-end/tree/master/Games/whackTheMole)
+- [Frogger](https://github.com/itsmaarouf/road-to-front-end/tree/master/Level%202:%20Intermediate/Frogger)
 - ...
 
 ## Frameworks
